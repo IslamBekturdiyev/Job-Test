@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Job Task</title>
+    <!-- style links -->
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <a href="/" class="logo">Logo</a>
+      <ul>
+        <li>
+          <div class="all-in-link">
+            <img src="/assets/list.png" alt="" />
+            <a href="">Все предложения</a>
+          </div>
+        </li>
+        <li><a href="">Скидки</a></li>
+        <li><a href="">Акции</a></li>
+        <li><a href="">Промокоды</a></li>
+        <li><a href="">Кешбэк</a></li>
+      </ul>
+      <div class="icon-links">
+        <a href="/">
+          <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M22.8333 32.1667C27.988 32.1667 32.1667 27.988 32.1667 22.8333C32.1667 17.6787 27.988 13.5 22.8333 13.5C17.6787 13.5 13.5 17.6787 13.5 22.8333C13.5 27.988 17.6787 32.1667 22.8333 32.1667Z"
+              stroke="#248888"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path d="M34.5001 34.5001L29.4834 29.4834" stroke="#248888" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </a>
+
+        <a href="/">
+          <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="48" height="48" rx="10" fill="white" />
+            <path
+              d="M32 15.6022L28.9946 31.2923C28.9946 31.2923 28.5741 32.3801 27.4189 31.8584L20.4846 26.3526L20.4524 26.3364C21.3891 25.4654 28.6524 18.7027 28.9698 18.3961C29.4613 17.9214 29.1562 17.6387 28.5856 17.9974L17.8568 25.053L13.7176 23.6108C13.7176 23.6108 13.0663 23.3708 13.0036 22.8491C12.9401 22.3265 13.7391 22.0439 13.7391 22.0439L30.6131 15.1889C30.6131 15.1889 32 14.5579 32 15.6022Z"
+              fill="#001C1C"
+            />
+          </svg>
+        </a>
+
+        <a href="/">
+          <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M14 33C13.9999 31.4603 14.4441 29.9533 15.2793 28.6598C16.1146 27.3664 17.3053 26.3414 18.7086 25.708C20.1119 25.0745 21.6682 24.8595 23.1908 25.0886C24.7133 25.3178 26.1373 25.9815 27.292 27"
+              stroke="#001C1C"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M22 25C24.7614 25 27 22.7614 27 20C27 17.2386 24.7614 15 22 15C19.2386 15 17 17.2386 17 20C17 22.7614 19.2386 25 22 25Z"
+              stroke="#001C1C"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path d="M31 28V34" stroke="#FF2E4C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M34 31H28" stroke="#FF2E4C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </a>
+        <a href="">
+          <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="48" height="48" rx="10" fill="white" />
+            <path
+              d="M16.2395 17.318H20.0555C20.5955 17.318 21.0275 17.33 21.3515 17.354C21.6875 17.378 22.0415 17.432 22.4135 17.516C22.7975 17.6 23.1035 17.726 23.3315 17.894C23.5715 18.062 23.7755 18.29 23.9435 18.578C24.0995 18.854 24.1775 19.202 24.1775 19.622V22.052C24.1775 23.024 23.7995 23.726 23.0435 24.158C22.2995 24.578 21.1955 24.788 19.7315 24.788H17.9855V29H16.2395V17.318ZM19.9655 23.69C20.7215 23.69 21.3275 23.552 21.7835 23.276C22.2395 23 22.4675 22.562 22.4675 21.962V19.838C22.4675 19.514 22.3835 19.25 22.2155 19.046C22.0475 18.83 21.8075 18.68 21.4955 18.596C21.1955 18.524 20.9435 18.476 20.7395 18.452C20.5355 18.428 20.2655 18.416 19.9295 18.416H17.9675V23.69H19.9655ZM28.4672 29.126L25.1012 20.288H26.8652L29.2952 27.398H29.3312L31.5272 20.288H33.1652L28.7912 32.744H27.0992L28.4672 29.126Z"
+              fill="#001C1C"
+            />
+          </svg>
+        </a>
+
+        <div class="add-discount-wrapper">
+          <a href="/" class="add-discount-button">Добавить скидку</a>
+          <span class="navbar-btn-dot">
+            <img src="/assets/plus-icon.svg" alt="" />
+          </span>
+        </div>
+
+        <button class="nav-toggle">
+          <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="48" height="48" rx="8" fill="white" />
+            <path d="M35 24H13" stroke="#248888" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M35 16H13" stroke="#248888" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M35 32H13" stroke="#248888" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Covering with container -->
+    <div class="container">
+      <!-- Discounts Today Section -->
+      <section class="new-discount">
+        <h3>Скидки дня</h3>
+        <span>23 предложения</span>
+
+        <!-- New Discoutns cards wrapper -->
+        <div class="new-cards-wrapper">
+          <!-- new card #1 -->
+          <div class="card">
+            <div class="card-image">
+              <img src="/assets/karzinka.png" alt="" />
+            </div>
+            <div class="card-body">
+              <h4 class="card-title">Korzinka.uz</h4>
+              <h3 class="card-suptext">В четверг скидки на рыбу</h3>
+
+              <div class="small-info">
+                <span class="card-discounts-text">Скидки</span>
+                <div>
+                  <button class="cashback-btn">Кешбэк</button>
+                  <span class="cashback">3%</span>
+                </div>
+              </div>
+
+              <span class="card-bottom">Супермаркеты</span>
+            </div>
+          </div>
+          <!-- new card #2 -->
+          <div class="card">
+            <div class="card-image">
+              <img src="/assets/mango.png" alt="" />
+            </div>
+            <div class="card-body">
+              <h4 class="card-title">MANGO</h4>
+              <h3 class="card-suptext">Акция 1+1</h3>
+
+              <div class="small-info">
+                <span class="card-discounts-text">Акции</span>
+                <div>
+                  <button class="cashback-btn">Кешбэк</button>
+                  <span class="cashback">3%</span>
+                </div>
+              </div>
+
+              <span class="card-bottom">Магазины брендовой одежды</span>
+            </div>
+          </div>
+          <!-- new card #3 -->
+          <div class="card">
+            <div class="card-image">
+              <img src="/assets/texnomart.png" alt="" />
+            </div>
+            <div class="card-body">
+              <h4 class="card-title">TEXNOMART</h4>
+              <h3 class="card-suptext">До — 60% на бытовую технику в ТЦ «Samarkand Darvoza»</h3>
+
+              <div class="small-info">
+                <span class="card-discounts-text">Скидки</span>
+                <div>
+                  <button class="cashback-btn">Кешбэк</button>
+                  <span class="cashback">3%</span>
+                </div>
+              </div>
+
+              <span class="card-bottom">Магазины электроники и бытовой техники</span>
+            </div>
+          </div>
+          <!-- new card #4 -->
+          <div class="card">
+            <div class="card-image">
+              <img src="/assets/makro.png" alt="" />
+            </div>
+            <div class="card-body">
+              <h4 class="card-title">TEXNOMART</h4>
+              <h3 class="card-suptext">При покупке CIF пачка губок Salixan БЕСПЛАТ..</h3>
+
+              <div class="small-info">
+                <span class="card-discounts-text">Скидки</span>
+                <div>
+                  <button class="cashback-btn">Кешбэк</button>
+                  <span class="cashback">3%</span>
+                </div>
+              </div>
+
+              <span class="card-bottom">Супермаркеты</span>
+            </div>
+          </div>
+          <!-- End of the new cards -->
+        </div>
+
+        <!-- new discounts show more button -->
+        <div class="new-btn-wrapper">
+          <div class="show-more-btn">
+            <a href="/" class="add-discount-button">Показать все</a>
+            <span class="navbar-btn-dot">
+              <img src="/assets/plus-icon.svg" alt="" />
+            </span>
+          </div>
+        </div>
+      </section>
+
+      <!-- main seciton -->
+      <main class="main-section">
+        <!-- Top discounted -->
+        <section class="top-discounts">
+          <h2>Топовые скидки</h2>
+          <div class="horizontal-line"></div>
+
+          <!-- Previous Button of slideshow -->
+          <span class="left-dot" id="prev-button">
+            <img src="/assets/arrow-left.png" alt="" />
+          </span>
+          <!-- Next Button of slideshow -->
+          <span class="next-btn-slideshow" id="next-button">
+            <img src="/assets/arrow-right.svg" alt="" />
+          </span>
+
+          <div>
+            <!-- tabs of slideshow -->
+            <div class="tabs">
+              <span class="active-tab tab1">Питание</span>
+              <span class="tab2">Связь</span>
+              <span class="tab3">Магазины</span>
+            </div>
+
+            <!-- Sldieshow of top discounted cards -->
+            <div class="slideshow">
+              <!-- card #1 -->
+              <div class="card-slideshow">
+                <div class="card-image">
+                  <img src="/assets/GOSTY.png" alt="" />
+                  <span class="alert-discount">До 29 февраля</span>
+                </div>
+                <div class="card-body">
+                  <h4 class="card-title">Korzinka.uz</h4>
+                  <h3 class="card-suptext">В четверг скидки на рыбу</h3>
+
+                  <div class="small-info">
+                    <span class="card-discounts-text">Скидки</span>
+                    <div>
+                      <button class="cashback-btn">Кешбэк</button>
+                      <span class="cashback">3%</span>
+                    </div>
+                  </div>
+
+                  <span class="card-bottom">Супермаркеты</span>
+                </div>
+              </div>
+              <!-- card #2 -->
+              <div class="card-slideshow">
+                <div class="card-image">
+                  <img src="/assets/shosh.png" alt="" />
+                  <span class="alert-urgent-discount">71:59:59</span>
+                </div>
+                <div class="card-body">
+                  <h4 class="card-title">Korzinka.uz</h4>
+                  <h3 class="card-suptext">В четверг скидки на рыбу</h3>
+
+                  <div class="small-info">
+                    <span class="card-discounts-text">Скидки</span>
+                    <div>
+                      <button class="cashback-btn">Кешбэк</button>
+                      <span class="cashback">3%</span>
+                    </div>
+                  </div>
+
+                  <span class="card-bottom">Супермаркеты</span>
+                </div>
+              </div>
+              <!-- card #3 -->
+              <div class="card-slideshow">
+                <div class="card-image">
+                  <img src="/assets/petrovic.png" alt="" />
+                  <span class="alert-discount">До 29 февраля</span>
+                </div>
+                <div class="card-body">
+                  <h4 class="card-title">Korzinka.uz</h4>
+                  <h3 class="card-suptext">В четверг скидки на рыбу</h3>
+
+                  <div class="small-info">
+                    <span class="card-discounts-text">Скидки</span>
+                    <div>
+                      <button class="cashback-btn">Кешбэк</button>
+                      <span class="cashback">3%</span>
+                    </div>
+                  </div>
+
+                  <span class="card-bottom">Супермаркеты</span>
+                </div>
+              </div>
+              <!-- card #4 -->
+              <div class="card-slideshow">
+                <div class="card-image">
+                  <img src="/assets/karzinka.png" alt="" />
+                  <span class="alert-discount">До 29 февраля</span>
+                </div>
+                <div class="card-body">
+                  <h4 class="card-title">Korzinka.uz</h4>
+                  <h3 class="card-suptext">В четверг скидки на рыбу</h3>
+
+                  <div class="small-info">
+                    <span class="card-discounts-text">Скидки</span>
+                    <div>
+                      <button class="cashback-btn">Кешбэк</button>
+                      <span class="cashback">3%</span>
+                    </div>
+                  </div>
+
+                  <span class="card-bottom">Супермаркеты</span>
+                </div>
+              </div>
+              <!-- end ofcards -->
+            </div>
+            <!-- End of slidehsow -->
+          </div>
+        </section>
+
+        <!-- about section -->
+        <section class="about">
+          <h2>Добро пожаловать на сайт</h2>
+          <h3>Ваш надёжный помощник в поиске лучших скидок и акций различных компаний!</h3>
+          <p>Мы собрали для вас все самые выгодные предложения, чтобы вы могли сэкономить свои деньги и получить максимум удовольствия от покупок.</p>
+          <p>Развернуть текст</p>
+        </section>
+
+        <!-- FAQ section -->
+        <section class="faq">
+          <h2>FAQ</h2>
+          <div class="accordion">
+            <!-- accordion #! -->
+            <div class="accordion-item">
+              <div class="accordion-header" id="headingOne">
+                <h2>Какие компании представлены на сайте?</h2>
+                <span class="toggle">
+                  <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 16H32" stroke="#BEDADA" stroke-width="2" />
+                    <path d="M16 32L16 -5.96046e-07" stroke="#BEDADA" stroke-width="2" />
+                  </svg>
+                </span>
+              </div>
+              <!-- accordion body part -->
+              <div class="accordion-body">
+                <p>
+                  Чтобы быть в курсе новых скидок и акций на сайте, вы можете подписаться на наш <a href="/">телеграм-канал</a> или следить за новостями. <br />
+                  <br />
+                  Мы регулярно отправляем информацию о новых предложениях и акциях нашим подписчикам, чтобы они всегда могли быть в курсе последних скидок и эксклюзивных
+                  предложений. <br />
+                  <br />
+                  Также можно регулярно посещать сайт и проверять разделы с акциями и скидками
+                </p>
+              </div>
+            </div>
+            <!-- accordion #2 -->
+            <div class="accordion-item">
+              <div class="accordion-header" id="headingTwo">
+                <h2>Как я могу быть в курсе новых скидок и акций на сайте?</h2>
+                <span class="toggle">
+                  <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 16H32" stroke="#BEDADA" stroke-width="2" />
+                    <path d="M16 32L16 -5.96046e-07" stroke="#BEDADA" stroke-width="2" />
+                  </svg>
+                </span>
+              </div>
+              <!-- accordion body part -->
+              <div class="accordion-body">
+                <p>
+                  Чтобы быть в курсе новых скидок и акций на сайте, вы можете подписаться на наш <a href="/">телеграм-канал</a> или следить за новостями. <br />
+                  <br />
+                  Мы регулярно отправляем информацию о новых предложениях и акциях нашим подписчикам, чтобы они всегда могли быть в курсе последних скидок и эксклюзивных
+                  предложений. <br />
+                  <br />
+                  Также можно регулярно посещать сайт и проверять разделы с акциями и скидками
+                </p>
+              </div>
+            </div>
+            <!-- accordion #3 -->
+            <div class="accordion-item">
+              <div class="accordion-header" id="headingThree">
+                <h2>Могу ли я поделиться найденными скидками и акциями с друзьями?</h2>
+                <span class="toggle">
+                  <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 16H32" stroke="#BEDADA" stroke-width="2" />
+                    <path d="M16 32L16 -5.96046e-07" stroke="#BEDADA" stroke-width="2" />
+                  </svg>
+                </span>
+              </div>
+              <!-- accordion body part -->
+              <div class="accordion-body">
+                <p>
+                  Чтобы быть в курсе новых скидок и акций на сайте, вы можете подписаться на наш <a href="/">телеграм-канал</a> или следить за новостями. <br />
+                  <br />
+                  Мы регулярно отправляем информацию о новых предложениях и акциях нашим подписчикам, чтобы они всегда могли быть в курсе последних скидок и эксклюзивных
+                  предложений. <br />
+                  <br />
+                  Также можно регулярно посещать сайт и проверять разделы с акциями и скидками
+                </p>
+              </div>
+            </div>
+            <!-- End of FAQ section -->
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <!-- javascript links and codes -->
+
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script type="text/javascript" src="main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,603 @@
+/* general styles */
+@import url("https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Play", sans-serif;
+}
+.container,
+.navbar {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+/* navbar css */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 90px;
+}
+.nav-toggle {
+  display: none;
+  border: none;
+  background-color: transparent;
+}
+.logo {
+  color: #023131;
+  font-weight: 700;
+  font-size: 44px;
+}
+li,
+a {
+  list-style: none;
+  text-decoration: none;
+}
+.navbar > ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+}
+.navbar a {
+  cursor: pointer;
+}
+.all-in-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+.icon-links {
+  display: flex;
+  align-items: center;
+}
+.add-discount-wrapper {
+  position: relative;
+}
+.show-more-btn {
+  width: 210px;
+}
+.add-discount-button {
+  background: #ff2e4c;
+  width: 205px;
+  height: 50px;
+  font-weight: 700;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+}
+.navbar-btn-dot {
+  background-color: #fff;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  right: -10px;
+  top: 15px;
+  border-radius: 50%;
+  transition: all 0.2s ease-in-out;
+}
+.navbar-btn-dot::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  background-color: #607282;
+  position: absolute;
+  border-radius: 50%;
+  left: 27%;
+  top: 27%;
+}
+.add-discount-button:hover ~ .navbar-btn-dot {
+  position: absolute;
+  right: -20px;
+  top: 5px;
+  width: 40px;
+  height: 40px;
+  background-color: #607282;
+  border-radius: 50%;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+}
+.navbar-btn-dot > img {
+  display: none;
+}
+.add-discount-button:hover ~ .navbar-btn-dot::before {
+  background-color: transparent;
+}
+.add-discount-button:hover ~ .navbar-btn-dot > img {
+  display: block;
+}
+
+/* ====================== Body Area ======================= */
+.new-discount {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 20px;
+  padding: 20px;
+  background-color: #f0f6f6;
+  max-width: 290px;
+  min-height: 100vh;
+}
+.new-cards-wrapper {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  justify-content: start;
+  align-items: start;
+  gap: 20px;
+}
+.new-discount > h3 {
+  font-size: 44px;
+}
+.show-more-btn {
+  position: relative;
+  width: 171px;
+}
+.show-more-btn > .navbar-btn-dot {
+  background-color: #f0f6f6;
+  right: -45px;
+  top: 15px;
+}
+.show-more-btn > .add-discount-button {
+  background-color: #fff;
+  color: #3c5858;
+}
+.show-more-btn > .add-discount-button:hover ~ .navbar-btn-dot {
+  right: -50px;
+  top: 5px;
+}
+
+/* -------------------  card design  ------------------ */
+.card {
+  max-width: 250px;
+  height: 294px;
+  background-color: #fff;
+  border-radius: 10px;
+  background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='10' ry='10' stroke='%23258888' stroke-width='1' stroke-dasharray='10' stroke-dashoffset='15' stroke-linecap='square'/%3e%3c/svg%3e");
+  background-size: contain;
+  background-position: center;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+.card:hover {
+  background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='10' ry='10' stroke='%23258888' stroke-width='1.8' stroke-dasharray='1000' stroke-dashoffset='15' stroke-linecap='square'/%3e%3c/svg%3e");
+  box-shadow: 0px 4px 15px 0px #0231311a;
+}
+
+.card-image {
+  position: relative;
+  border: 1px solid #248888;
+  border-bottom: none;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.card-image > img {
+  width: 100%;
+}
+.slideshow .card-image > img {
+  height: 185px;
+}
+.alert-discount,
+.alert-urgent-discount {
+  position: absolute;
+  left: 8px;
+  top: 8px;
+  padding: 4px 12px 6px 12px;
+  background-color: #ffedef;
+  border-radius: 4px;
+  max-width: 126px;
+  color: #ff2e4c;
+  font-size: 14px;
+  font-weight: 700;
+}
+.alert-urgent-discount {
+  background-color: #ff2e4c;
+  border: 1px solid #fff;
+  color: #fff;
+  min-width: 126px;
+}
+.card-body {
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  border-radius: 10px;
+}
+.card-title {
+  font-weight: normal;
+  text-transform: uppercase;
+  color: #607282;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+.card-title:hover {
+  color: #ff2e4c;
+}
+.card-suptext {
+  margin-top: 4px;
+  font-size: 18px;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+.card-suptext:hover {
+  color: #248888;
+}
+.card-suptext {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.card-bottom {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.small-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #607282;
+}
+.card-discounts-text {
+  cursor: pointer;
+  transition: all 0.2s ease-in;
+}
+.card-discounts-text:hover {
+  color: #ff2e4c;
+}
+.small-info > div {
+  display: flex;
+}
+.cashback-btn {
+  background-color: #fff;
+  border: 1px solid #607282;
+  padding: 4px 8px;
+  border-radius: 4px;
+  color: #607282;
+}
+.cashback {
+  background-color: #607282;
+  color: #fff;
+  padding: 4px 8px;
+  border: 1px solid #607282;
+  border-radius: 4px;
+  font-size: 14px;
+}
+.card-bottom {
+  color: #607282;
+}
+/* slideshow card style changes */
+.card-slideshow {
+  max-width: 290px;
+  background-color: #fff;
+  border-radius: 10px;
+  background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='10' ry='10' stroke='%23258888' stroke-width='1' stroke-dasharray='10' stroke-dashoffset='15' stroke-linecap='square'/%3e%3c/svg%3e");
+  background-size: contain;
+  background-position: center;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+.card-slideshow:hover {
+  background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='10' ry='10' stroke='%23258888' stroke-width='1.8' stroke-dasharray='2000' stroke-dashoffset='15' stroke-linecap='square'/%3e%3c/svg%3e");
+  box-shadow: 0px 4px 15px 0px #0231311a;
+}
+
+/* ==================== Slideshow section  ====================== */
+.main-section {
+  max-width: 970px;
+  float: right;
+}
+
+.top-discounts {
+  background-color: #f0f6f6;
+  padding: 30px;
+  border-radius: 10px;
+  position: relative;
+}
+.top-discounts h2 {
+  font-size: 44px;
+  color: #248888;
+}
+.horizontal-line {
+  width: 100%;
+  height: 1px;
+  background-color: #bedada;
+  margin-bottom: 15px;
+  margin-top: 20px;
+}
+.slideshow {
+  padding-top: 30px;
+}
+.slick-track {
+  display: flex !important;
+  justify-content: space-between;
+  gap: 20px;
+}
+.left-dot {
+  background-color: #fff;
+  width: 32px;
+  height: 32px;
+  position: absolute;
+  left: -20px;
+  top: 50%;
+  border-radius: 50%;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+.left-dot::before,
+.next-btn-slideshow::before {
+  content: "";
+  width: 16px;
+  height: 16px;
+  background-color: #607282;
+  position: absolute;
+  border-radius: 50%;
+  left: 27%;
+  top: 27%;
+}
+.left-dot:hover {
+  position: absolute;
+  right: -20px;
+  top: 48%;
+  width: 48px;
+  height: 48px;
+  background-color: #607282;
+  border-radius: 50%;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+}
+.left-dot:hover::before,
+.next-btn-slideshow:hover::before {
+  background-color: transparent;
+}
+.left-dot img,
+.next-btn-slideshow img {
+  width: 24px;
+  height: 24px;
+}
+.next-btn-slideshow {
+  background-color: #fff;
+  width: 32px;
+  height: 32px;
+  position: absolute;
+  right: -20px;
+  top: 50%;
+  border-radius: 50%;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+.next-btn-slideshow:hover {
+  position: absolute;
+  right: -20px;
+  top: 48%;
+  width: 48px;
+  height: 48px;
+  background-color: #607282;
+  border-radius: 50%;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+}
+.slick-dots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  margin-top: 20px;
+}
+.slick-dots li {
+  background-color: #bedada;
+  border-radius: 50%;
+  color: transparent;
+  width: 10px;
+  height: 10px;
+}
+.slick-dots .slick-active {
+  background-color: #607282 !important;
+}
+.slick-dots li button {
+  display: none;
+}
+/* --------------- tabs of slide show ----------------- */
+.tabs {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  text-transform: uppercase;
+  font-size: 20px;
+}
+.tabs > .active-tab {
+  position: relative;
+}
+.tabs > .active-tab::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  background-color: #ff2e4c;
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  border-radius: 50%;
+}
+
+/* ====================  About Section  ====================== */
+.about {
+  margin-top: 70px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.about h2 {
+  font-size: 28px;
+}
+.about h3 {
+  font-size: 18px;
+}
+.about p {
+  font-size: 17px;
+  color: #3c5858;
+}
+
+/* ======================== FAQ section ================== */
+.faq {
+  margin-top: 70px;
+}
+.accordion {
+  overflow: hidden;
+}
+.accordion-item {
+  border-bottom: 1px solid #bedada;
+}
+
+.accordion-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  cursor: pointer;
+}
+.accordion-body {
+  padding-top: 15px;
+  display: none;
+  padding-bottom: 25px;
+  font-size: 18px;
+  padding-left: 110px;
+  color: #3c5858;
+}
+.accordion-body a {
+  color: #ff2e4c;
+}
+
+.toggle {
+  transition: transform 0.3s;
+}
+.rotate {
+  transform: rotate(45deg);
+}
+.accordion-header:hover .toggle svg path {
+  stroke: #ff2e4c;
+}
+
+/* ====================== Breakpoint Responsiveness =========================== */
+@media only screen and (max-width: 1280px) {
+  .navbar {
+    padding: 20px;
+  }
+
+  .new-discount {
+    min-width: 100%;
+    padding: 60px 20px;
+    min-height: auto;
+  }
+  .new-cards-wrapper {
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: space-between;
+  }
+  .new-btn-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+  .card-body {
+    justify-content: space-between;
+  }
+  .main-section {
+    margin-top: 60px;
+    float: none;
+    padding: 20px;
+    min-width: 100%;
+  }
+  .top-discounts {
+    width: 100%;
+  }
+  .card-suptext {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .card-bottom {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+@media only screen and (max-width: 1099px) {
+  .navbar > ul,
+  .add-discount-wrapper,
+  .icon-links > *:nth-child(2),
+  .icon-links > *:nth-child(3) {
+    display: none;
+  }
+  .nav-toggle {
+    display: inherit;
+  }
+  .new-cards-wrapper {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    justify-content: space-between;
+  }
+}
+
+@media only screen and (max-width: 560px) {
+  .top-discounts {
+    padding: 30px 10px;
+  }
+  .slick-track {
+    justify-content: space-between;
+  }
+  .tabs {
+    overflow-x: scroll;
+  }
+  .new-cards-wrapper {
+    grid-template-columns: repeat(2, minmax(160px, 1fr));
+  }
+  .card {
+    height: 320px;
+  }
+  .card-image {
+    height: 135px;
+  }
+  .card-image > img {
+    height: 100%;
+    width: 100%;
+  }
+  .small-info {
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    gap: 10px;
+  }
+  .card-suptext {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .card-bottom {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .left-dot,
+  .next-btn-slideshow {
+    display: none !important;
+  }
+  .accordion-header > h2 {
+    font-size: 20px;
+  }
+  .accordion-header {
+    padding: 15px 0;
+    gap: 50px;
+  }
+  .toggle > svg {
+    width: 24px;
+    height: 24px;
+  }
+  .accordion-body {
+    padding-left: 0;
+    padding-right: 20px;
+  }
+}
